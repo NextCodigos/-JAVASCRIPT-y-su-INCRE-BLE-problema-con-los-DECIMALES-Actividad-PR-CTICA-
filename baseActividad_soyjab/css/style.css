@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+input{
+  font-family: 'Montserrat', sans-serif;
+  outline:none;
+  font-size:1.2em;
+  padding:5px 10px;
+  border-radius:5px;
+  border:1px solid silver;
+}
+fieldset{
+  display:inline-block;
+  border-radius:7px;
+  padding:12px 15px 20px;
+  width:200px;
+}
+.resultado{
+  font-size:1.2em;
+  margin-top:12px;
+}
