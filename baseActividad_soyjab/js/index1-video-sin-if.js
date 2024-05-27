@@ -4,7 +4,7 @@ INPUT1.addEventListener("keydown",teclado);
 INPUT2.addEventListener("keydown",teclado);
 
 function teclado(e){
-    e.keyCode=="Enter" && leer();
+    e.key==="Enter" && leer();
 }
 
 function leer(){
@@ -12,8 +12,9 @@ function leer(){
     const N2 = Number(INPUT2.value.trim());
     
       // comprobamos que ha escrito algo,no esta vacio
-      (N1 === true && N2 === true)
-      ? calcular(N1, N2)
+    //   (N1 === true && N2 === true)
+      (N1 && N2)
+      ? calcular(N1,N2)
       : vaciar();
 }
 
@@ -36,11 +37,11 @@ function calcular(valor1,valor2){
 
 function escribir(valor){
     reiniciar();
-    document.querySelector(".resultado").innerHTML = `
+    document.querySelector(".resultado").innerHTML+= `
     <div>${valor}</div>
     `;
 }
-
+// Ir a los inputs y vaciar despues del resultado
 function reiniciar(){
     INPUT1.value="";
     INPUT2.value="1.1";
